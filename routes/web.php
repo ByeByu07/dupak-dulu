@@ -1,5 +1,6 @@
 <?php
 
+use App\Http\Controllers\DupakController;
 use Illuminate\Support\Facades\Route;
 
 /*
@@ -15,4 +16,9 @@ use Illuminate\Support\Facades\Route;
 
 Route::get('/', function () {
     return view('welcome');
+});
+Route::controller(DupakController::class)->group(function(){
+    Route::get('/dupak','index')->name('dupak.index');
+    Route::get('/dupak/create')->name('dupak.create');
+    Route::get('/dupak/{dupak}/edit')->name('dupak.edit');
 });
