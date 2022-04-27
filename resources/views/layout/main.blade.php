@@ -20,78 +20,56 @@
 <body>
     <div class="row">
         <div class="col-lg-12">
-            <nav class="navbar navbar-expand-lg navbar-dark justify-content-between d-flex" style="background-color: #023047">
-                <div class='justify-content-center align-items-center'>
-                    <a class="navbar-brand" href="/">DupakDulu</a>
+          <nav class="navbar navbar-expand-lg navbar-dark" style="background-color: #023047">
+            <div class="container-fluid">
+              <a class="navbar-brand" href="/">DupakDulu</a>
+              <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+              </button>
+              <div class="collapse navbar-collapse " id="navbarNavAltMarkup">
+                <div class="navbar-nav d-flex justify-content-between">
+                    @auth
+                    <a class="btn btn-light" href="/dashboard">Dashboard</a>
+                    @else
+                    <a class="btn btn-light" href="/login" data-bs-toggle="modal" data-bs-target="#login">Login</a>
+                    @endauth
+                    <a class="nav-link" href="/dupak" style="color:#8ecae6">DUPAK</a>
+                    <a class="nav-link" href="/skp" style="color:#8ecae6">SKP</a>
+                    <a class="nav-link" href="/about" style="color:#8ecae6">About Us</a>
                 </div>
-                <div class="text-white">
-                    <ul class="nav">
-                        <div class="d-flex">
-                            <li class="nav-item">
-                                <a class="nav-link" href="/dupak" style="color:#8ecae6">DUPAK</a>
-                              </li>
-                              <li class="nav-item">
-                                <a class="nav-link" href="/skp" style="color:#8ecae6">SKP</a>
-                              </li>
-                               <li class="nav-item">
-                                <a class="nav-link" href="/bapak" style="color:#8ecae6">BAPAK</a>
-                              </li>
-                              {{-- <li class="nav-item">
-                                  <a class="nav-link" href="/dupak" style="color:#8ecae6">DUPAK</a>
-                                </li>
-                                <li class="nav-item">
-                                  <a class="nav-link" href="/skp" style="color:#8ecae6">SKP</a>
-                                </li>
-                                 <li class="nav-item">
-                                  <a class="nav-link" href="/skp" style="color:#8ecae6">BAPAK</a>
-                                </li> --}}
-                              <li class="nav-item">
-                                <a class="nav-link" href="/about" style="color:#8ecae6">ABOUT</a>
-                              </li>
-                        </div>
-                        {{-- <div class="collapse" id="navbarToggleExternalContent">
-                            <li class="btn btn-light">Login</li>
-                            <li class="nav-item">
-                                <a class="nav-link" href="/dupak" style="color:#8ecae6">DUPAK</a>
-                              </li>
-                              <li class="nav-item">
-                                <a class="nav-link" href="/skp" style="color:#8ecae6">SKP</a>
-                              </li>
-                               <li class="nav-item">
-                                <a class="nav-link" href="/skp" style="color:#8ecae6">BAPAK</a>
-                              </li>
-                              <li class="nav-item">
-                                  <a class="nav-link" href="/dupak" style="color:#8ecae6">DUPAK</a>
-                                </li>
-                                <li class="nav-item">
-                                  <a class="nav-link" href="/skp" style="color:#8ecae6">SKP</a>
-                                </li>
-                                 <li class="nav-item">
-                                  <a class="nav-link" href="/skp" style="color:#8ecae6">BAPAK</a>
-                                </li>
-                              <li class="nav-item">
-                                <a class="nav-link" href="/about" style="color:#8ecae6">ABOUT</a>
-                              </li>
-                        </div>
-                        <li class="nav-item container-fluid">
-                            <button class="navbar-toggler nav-link" type="button" data-bs-toggle="collapse" data-bs-target="#navbarToggleExternalContent" aria-controls="navbarToggleExternalContent" aria-expanded="false" aria-label="Toggle navigation">
-                              <span class="navbar-toggler-icon"></span>
-                            </button>
-                        </li> --}}
-                        <div class="d-flex ">
-                            <li class="btn btn-light">Login</li>
-                        </div>
-                      </ul>
-                </div>
-
-              </nav>
+              </div>
+            </div>
+          </nav>
         </div>
     </div>
           @yield('content')
           <div class="row mt-5">
             <div class="col-lg-12">
-                <div class="navbar d-flex justify-content-center text-white py-3" style="background-color: #023047">Made By DupakDulu with ❤</div>
+                <div class="navbar d-flex justify-content-center text-white py-3" style="background-color: #023047">Made By DupakDulu With ❤</div>
             </div>
         </div>
 </body>
 </html>
+
+<div class="modal fade" id="login" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+    <div class="modal-dialog">
+      <div class="modal-content">
+        <div class="modal-header text-center">
+          <h5 class="modal-title" id="exampleModalLabel">Login</h5>
+          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+        </div>
+        <div class="modal-body">
+            <form action="/login" method="post">
+                <div class="container">
+                    <input class="form-control" type="email" name="email" id="email">
+                    <input class="form-control" type="password" name="password" id="password">
+                </div>
+        </div>
+        <div class="modal-footer">
+          <a data-bs-dismiss="modal">Register ?</a>
+          <button type="button" class="btn btn-primary">Login</button>
+          </form>
+        </div>
+      </div>
+    </div>
+  </div>
