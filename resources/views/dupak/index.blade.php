@@ -159,7 +159,7 @@
             <div class="col-lg-4">
                 <label for="periode-pak" class="form-label">Order Periode PAK / Semester</label>
                 <select name="periode-pak" id="periode-pak" class="form-control">
-                    @for ($i = 0; $i<=8;$i++)
+                    @for ($i = 1; $i<=8;$i++)
                         <option value='{{$i}}'>{{$i}}</option>
                     @endfor
                 </select>
@@ -167,11 +167,18 @@
         </div>
         <div class="row my-5">
             <div class="col-lg-8 total mb-5">
-               <h1 class="text-center">Rp. 100.000,00-</h1>
+               <h1 class="text-center total-pak"></h1>
             </div>
             <div class="col-lg-4">
                 <button class="btn btn-primary w-100 py-2">Bayar</button>
             </div>
         </div>
     </div>
+    <script>
+        $('#periode-pak').on('change', function () {
+            // const total = `Rp. ${($(this).val())*50}.000,00.-`;
+            // $('.total-pak').html('halo');
+            $('.total-pak').html('<p>hal</p>htmlString');
+        });
+    </script>
 @stop

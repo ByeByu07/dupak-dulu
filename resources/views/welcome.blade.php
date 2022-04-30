@@ -72,68 +72,32 @@
 
 
       </main>
-
-<div class="row p-5">
+<div class="row p-5 ">
     <div class="col-lg-12">
         <p style="font-size: 5em" class="text-center  d-flex justify-content-center">
             Layanan Kami
         </p>
     </div>
 </div>
-<div class="row ">
-    <div class="col-lg-6 col-md-6">
+<div class="row">
+    <div class="col-lg-6 col-md-6 ">
       <div class="card border-0">
-        <div class="card-body">
+        <div class="card-body ">
           <h5 class="card-title">DUPAK </h5>
           <p class="card-text">Daftar yang memuat prestasi kerja yang dicapai oleh calon atau pejabat fungsional yang diajukan dalam bentuk angka kredit dalam kurun waktu tertentu sesuai dengan ketentuan masing-masing peraturan jabatan fungsional dan angka kreditnya</p>
           <a href="#" class="btn btn-primary">Buat DUPAK</a>
         </div>
       </div>
     </div>
-    <div class="col-lg-6 col-md-6">
+    <div class="col-lg-6 col-md-6 ">
       <div class="card border-0">
-        <div class="card-body">
+        <div class="card-body ">
           <h5 class="card-title">SKP </h5>
           <p class="card-text"> Rencana dan target kinerja yang harus dicapai oleh pegawai dalam kurun waktu penilaian yang bersifat nyata dan dapat diukur serta disepakati pegawai dan atasannya</p>
           <a href="#" class="btn btn-primary">Buat SKP</a>
         </div>
       </div>
     </div>
-    {{-- <div class="col-lg-4 col-md-6">
-        <div class="card border-0">
-          <div class="card-body">
-            <h5 class="card-title">BAPAK </h5>
-            <p class="card-text">With supporting text below as a natural lead-in to additional content.</p>
-            <a href="#p" id='p' class="btn btn-dark">Segera Datang . . .</a>
-          </div>
-        </div>
-      </div>
-    <div class="col-lg-4 col-md-6">
-      <div class="card border-0">
-        <div class="card-body">
-          <h5 class="card-title">DUPAK </h5>
-          <p class="card-text">With supporting text below as a natural lead-in to additional content.</p>
-          <a href="#" class="btn btn-primary">Buat DUPAK</a>
-        </div>
-      </div>
-    </div>
-    <div class="col-lg-4 col-md-6">
-      <div class="card border-0">
-        <div class="card-body">
-          <h5 class="card-title">SKP </h5>
-          <p class="card-text">With supporting text below as a natural lead-in to additional content.</p>
-          <a href="#" class="btn btn-primary">Buat SKP</a>
-        </div>
-      </div>
-    </div>
-    <div class="col-lg-4 col-md-6">
-        <div class="card border-0">
-          <div class="card-body">
-            <h5 class="card-title">BAPAK </h5>
-            <p class="card-text">With supporting text below as a natural lead-in to additional content.</p>
-            <a href="#" class="btn btn-primary">Buat SKP</a>
-          </div>
-        </div>
-      </div> --}}
-  </div>
+</div>
+
 @stop
