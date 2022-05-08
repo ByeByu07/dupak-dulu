@@ -44,7 +44,15 @@
               <div class="collapse navbar-collapse mt-2" id="navbarNavAltMarkup">
                 <div class="navbar-nav d-flex justify-content-between">
                     @auth
-                    <a class="btn btn-light" href="/dashboard">Dashboard</a>
+                    <div class="dropdown">
+                        <button class="btn btn-light dropdown-toggle" type="button" id="dropdownMenuButton2" data-bs-toggle="dropdown" aria-expanded="false">
+                          Dashboard
+                        </button>
+                        <ul class="dropdown-menu dropdown-menu-dark" aria-labelledby="dropdownMenuButton2">
+                          <li><a class="dropdown-item" href="/dashboard">Go Dashboard</a></li>
+                          <li><a class="dropdown-item" href="/logout">LogOut</a></li>
+                        </ul>
+                      </div>
                     @else
                     <a class="btn btn-light" href="/login" data-bs-toggle="modal" data-bs-target="#login">SignIn</a>
                     @endauth
@@ -92,7 +100,7 @@
         </div>
         <div class="modal-footer justify-content-between p-4">
             <div class="">
-                <a href="/forgot-password">Forgot password ?</a>
+                <a href="#" data-bs-toggle="modal" data-bs-target="#forgot-password">Forgot password ?</a>
             </div>
             <div class="">
                 <a data-bs-toggle="modal" data-bs-target="#register" href="#">SignUp ?</a>
@@ -163,9 +171,9 @@
                 </div>
         </div>
         <div class="modal-footer justify-content-between p-4">
-            <div class="">
-                <a href="/forgot-password">Forgot password ?</a>
-            </div>
+            {{-- <div class="">
+                <a href="#" data-bs-toggle="modal" data-bs-target="#forgot-password">Forgot password ?</a>
+            </div> --}}
             <div class="">
                 <button type="button" class="btn btn-primary">Register</button>
             </div>
@@ -174,3 +182,37 @@
       </div>
     </div>
   </div>
+
+  {{-- FORGOT PASWORD --}}
+  <div class="modal fade" id="forgot-password" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+    <div class="modal-dialog modal-lg">
+      <div class="modal-content">
+        <div class="modal-header justify-content-beetwen">
+          <h2 class="modal-title" id="exampleModalLabel">Forgot Password</h2>
+          <button type="button" class="btn-close float-end btn-light btn" data-bs-dismiss="modal" aria-label="Close">&times;</button>
+        </div>
+        <div class="modal-body bg-light">
+            <form action="/forgot-password" method="post">
+                <div class="container">
+                    <hr>
+                    <div class="row">
+                        <div class="mb-3 col-lg-12">
+                            <label for="email" class="form-label">Email</label>
+                            <div class="input-group">
+                                <span class="input-group-text" id="email">@</span>
+                                <input class="form-control" type="email" name="email" id="email"  aria-describedby="email">
+                            </div>
+                        </div>
+                    </div>
+                </div>
+        </div>
+        <div class="modal-footer justify-content-between p-4">
+            <div class="">
+                <button type="button" class="btn btn-primary">Send e-mail forgot password </button>
+            </div>
+          </form>
+        </div>
+      </div>
+    </div>
+  </div>
+
