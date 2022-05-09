@@ -1,6 +1,7 @@
 <?php
 
 use App\Http\Controllers\DupakController;
+use App\Http\Controllers\DashboardController;
 use Illuminate\Support\Facades\Route;
 
 /*
@@ -17,8 +18,19 @@ use Illuminate\Support\Facades\Route;
 Route::get('/', function () {
     return view('welcome');
 });
+Route::fallback(function(){
+    return view('fallback');
+});
+
+
 Route::controller(DupakController::class)->group(function(){
     Route::get('/dupak','index')->name('dupak.index');
     Route::get('/dupak/create')->name('dupak.create');
     Route::get('/dupak/{dupak}/edit')->name('dupak.edit');
 });
+
+// =========================DASHBOARD USER=========================
+    Route::get('/dashboard',[DashboardController::class,'index']);//->middleware('auth');
+
+
+// =========================DASHBOARD ADMIN=========================

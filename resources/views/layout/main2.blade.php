@@ -38,27 +38,23 @@
           <nav class="navbar navbar-expand-lg navbar-dark" style="background-color: #023047">
             <div class="container-fluid">
               <a class="navbar-brand logo border-bottom border-white" href="/">DupakDulu</a>
-              <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
-                <span class="navbar-toggler-icon"></span>
+                <div class="dropdown">
+                    <button class="btn dropdown-toggle navbar-toggler" type="button" id="p" data-bs-toggle="dropdown" aria-expanded="false">
+                      Dashboard
+                    </button>
+                    <ul class="dropdown-menu dropdown-menu-dark" aria-labelledby="p">
+                        @if (Request::is('/dashboard'))
+                            <li><a class="dropdown-item" href="/dashboard">Go Dashboard</a></li>
+                        @else()
+                            <li><a class="dropdown-item" href="/chg-pass">Change Password</a></li>
+                            <li><a class="dropdown-item" href="/logout">Contact Us</a></li>
+                            <li><a class="dropdown-item" href="/logout">LogOut</a></li>
+                        @endif
+                    </ul>
+                </div>
               </button>
               <div class="collapse navbar-collapse mt-2" id="navbarNavAltMarkup">
                 <div class="navbar-nav d-flex justify-content-between">
-                    @auth
-                    <div class="dropdown">
-                        <button class="btn btn-light dropdown-toggle" type="button" id="dropdownMenuButton2" data-bs-toggle="dropdown" aria-expanded="false">
-                          Dashboard
-                        </button>
-                        <ul class="dropdown-menu dropdown-menu-dark" aria-labelledby="dropdownMenuButton2">
-                          <li><a class="dropdown-item" href="/dashboard">Go Dashboard</a></li>
-                          <li><a class="dropdown-item" href="/logout">LogOut</a></li>
-                        </ul>
-                      </div>
-                    @else
-                    <a class="btn btn-light" href="/login" data-bs-toggle="modal" data-bs-target="#login">SignIn</a>
-                    @endauth
-                    <a class="nav-link" href="/dupak" style="color:#8ecae6">DUPAK</a>
-                    <a class="nav-link" href="/skp" style="color:#8ecae6">SKP</a>
-                    <a class="nav-link" href="/about" style="color:#8ecae6">About Us</a>
                 </div>
               </div>
             </div>
@@ -66,11 +62,11 @@
         </div>
     </div>
           @yield('content')
-          <div class="row mt-5">
+          {{-- <div class="row mt-5">
             <div class="col-lg-12">
                 <div class="navbar d-flex justify-content-center text-white py-3" style="background-color: #023047">Made By <span class="border-light border-bottom mx-1 footer-ku"> DupakDulu </span> With ❤ </div>
             </div>
-        </div>
+        </div> --}}
 </body>
 </html>
 
@@ -104,7 +100,7 @@
             </div>
             <div class="">
                 <a data-bs-toggle="modal" data-bs-target="#register" href="#">SignUp ?</a>
-                <button type="submit" class="btn btn-primary">Login</button>
+                <button type="button" class="btn btn-primary">Login</button>
             </div>
           </form>
         </div>
@@ -129,6 +125,7 @@
                               <li>No TelePhone diutamakan What'sApp yang aktif</li>
                           </ul>
                     </div> --}}
+                    <hr>
                     <div class="row">
                         <div class="mb-3 col-lg-12">
                             <label for="email" class="form-label">Email</label>
@@ -160,13 +157,13 @@
                         </div>
                     </div>
                 </div>
-                <div class="text-center mt-2">
+                <div class="text-center my-5">
                     <p>Or SignIn With</p>
                 </div>
                 <div class="third-sign-in row">
-                    {{-- <a href="" class=" col-12">
+                    <a href="" class=" col-12">
                         <img class="img-fluid mx-auto d-block" src="black.jpg" width="200">
-                    </a> --}}
+                    </a>
                 </div>
         </div>
         <div class="modal-footer justify-content-between p-4">
@@ -174,10 +171,7 @@
                 <a href="#" data-bs-toggle="modal" data-bs-target="#forgot-password">Forgot password ?</a>
             </div> --}}
             <div class="">
-                <button type="button" class="btn btn-primary"  data-bs-target="#login" data-bs-toggle="modal">Back </button>
-            </div>
-            <div class="">
-                <button type="submit" class="btn btn-primary">Register</button>
+                <button type="button" class="btn btn-primary">Register</button>
             </div>
           </form>
         </div>
@@ -196,6 +190,7 @@
         <div class="modal-body bg-light">
             <form action="/forgot-password" method="post">
                 <div class="container">
+                    <hr>
                     <div class="row">
                         <div class="mb-3 col-lg-12">
                             <label for="email" class="form-label">Email</label>
@@ -209,10 +204,7 @@
         </div>
         <div class="modal-footer justify-content-between p-4">
             <div class="">
-                <button type="button" class="btn btn-primary"  data-bs-target="#login" data-bs-toggle="modal">Back </button>
-            </div>
-            <div class="">
-                <button type="submit" class="btn btn-primary">Send e-mail forgot password </button>
+                <button type="button" class="btn btn-primary">Send e-mail forgot password </button>
             </div>
           </form>
         </div>
