@@ -136,6 +136,27 @@
             </div>
         </div>
         <div class="row mb-2">
+            <div class="col-lg-12">
+                <label for="gol-baru" class="form-label">Masa Kerja Golongan Baru</label>
+                <div class="d-flex"><span class="badge text-white" style="background-color: #023047">Contoh : 03 Tahun 06 Bulan</span></div>
+                <input type="text" class="form-control" name="gol-baru" id="gol-baru" placeholder="Masa Kerja Golongan Baru seusai dengan jumlah pengajuan DUPAK terakhir">
+            </div>
+        </div>
+        <div class="row mb-2">
+            <div class="col-lg-12">
+                <label for="unit-kerja" class="form-label">Unit Kerja atau Lembaga</label>
+                <div class=""><span class="badge text-white" style="background-color: #023047">Contoh : Kementrian Kesehatan RI</span></div>
+                <input type="text" class="form-control" name="unit-kerja" id="unit-kerja">
+            </div>
+        </div>
+        <div class="row mb-2">
+            <div class="col-lg-12">
+                <label for="satuan-kerja" class="form-label">Satuan Kerja atau UPTD</label>
+                <div class=""><span class="badge text-white" style="background-color: #023047">Contoh : UPTD Puskesmas Lawu Selatan</span></div>
+                <input type="text" class="form-control" name="satuan-kerja" id="satuan-kerja">
+            </div>
+        </div>
+        <div class="row mb-2">
             <div class="col-lg-4 mb-2">
                 <label for="sk-pangkat-terakhir" class="form-label">SK Pangkat Terakhir</label>
                 <input class='form-control form-control-file' type="file" name="sk-pangkat-terakhir" id="sk-pangkat-terakhir">
@@ -147,6 +168,17 @@
             <div class="col-lg-4 mb-2">
                 <label for="skp-terakhir" class="form-label">SKP Terakhir</label>
                 <input class='form-control form-control-file' type="file" name="skp-terakhir" id="skp-terakhir">
+            </div>
+        </div>
+        <div class="row mb-2">
+            <div class="col-lg-8">
+                <label for="rekomendasi" class="form-label">Rekomendasi atau Order Penilaian</label>
+                <select name="rekomendasi" id="rekomendasi" class="form-select form-control">
+                    <option value=""></option>
+                    <option value="pangkat">Naik Pangkat</option>
+                    <option value="jabatan">Naik Jabatan</option>
+                    <option value="pemeliharaan">Pemeliharaan</option>
+                </select>
             </div>
         </div>
         <div class="row mb-2">
@@ -165,12 +197,12 @@
                 </select>
             </div>
         </div>
-        <div class="row my-5">
+        <div class="row my-5 p-5 bg-dark rounded shadow">
             <div class="col-lg-8 total mb-5">
-               <h1 class="text-center total-pak"></h1>
+               <h1 class="text-center total-pak text-white">Rp. 100.000</h1>
             </div>
-            <div class="col-lg-4">
-                <button class="btn btn-primary w-100 py-2">Bayar</button>
+            <div class="col-lg-4 p-3">
+                <button class="btn btn-light w-100 py-2">Bayar</button>
             </div>
         </div>
     </div>
