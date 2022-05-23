@@ -87,6 +87,7 @@
         </div>
         <div class="modal-body bg-light">
             <form action="/login" method="post">
+                @csrf
                 <div class="container">
                     <div class="mb-3">
                         <label for="email" class="form-label">Email</label>
@@ -122,6 +123,7 @@
         </div>
         <div class="modal-body bg-light">
             <form action="/login" method="post">
+                @csrf
                 <div class="container">
                     {{-- <div class="mb-3 bg-warning p-2 rounded text-white">
                           <h5> Masukkan nomor TelePhone dan Email yang aktif</h5>
@@ -195,6 +197,7 @@
         </div>
         <div class="modal-body bg-light">
             <form action="/forgot-password" method="post">
+                @csrf
                 <div class="container">
                     <div class="row">
                         <div class="mb-3 col-lg-12">
@@ -212,7 +215,7 @@
                 <button type="button" class="btn btn-primary"  data-bs-target="#login" data-bs-toggle="modal">Back </button>
             </div>
             <div class="">
-                <button type="submit" class="btn btn-primary">Send e-mail forgot password </button>
+                <button type="submit" class="btn btn-primary">Send e-mail reset password </button>
             </div>
           </form>
         </div>

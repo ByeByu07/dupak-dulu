@@ -48,6 +48,7 @@
                         @else
                             <li><a class="dropdown-item" href="/dashboard/chg-pass">Change Password</a></li>
                             <li><a class="dropdown-item" href="/dashboard/contact-us">Contact Us</a></li>
+                            <li><a class="dropdown-item" href="/dashboard/up-profile">Update Profile</a></li>
                             <li>
                                 <form action="/logout" method="post">
                                     <button class="dropdown-item" type="submit">LogOut</button>

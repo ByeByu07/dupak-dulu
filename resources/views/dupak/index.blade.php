@@ -197,12 +197,12 @@
                 </select>
             </div>
         </div>
-        <div class="row my-5 p-5 bg-primary rounded shadow">
+        <div class="row mt-4 pt-5  pb-3 rounded shadow" style="background-color: #023047">
             <div class="col-lg-8 total mb-5">
                <h1 class="text-center total-pak text-white">Rp. 100.000</h1>
             </div>
             <div class="col-lg-4 p-3">
-                <button class="btn btn-light w-100 py-2">Bayar</button>
+                <button class="btn btn-success w-100 py-2">Bayar</button>
             </div>
         </div>
     </div>
