@@ -32,7 +32,7 @@
         font-weight: 400;
     }
 </style>
-<body>
+<body class="bg-light">
     <div class="row">
         <div class="col-lg-12">
           <nav class="navbar navbar-expand-lg navbar-dark" style="background-color: #023047">
@@ -45,10 +45,14 @@
                     <ul class="dropdown-menu dropdown-menu-dark" aria-labelledby="p">
                         @if (Request::is('/dashboard'))
                             <li><a class="dropdown-item" href="/dashboard">Go Dashboard</a></li>
-                        @else()
-                            <li><a class="dropdown-item" href="/chg-pass">Change Password</a></li>
-                            <li><a class="dropdown-item" href="/logout">Contact Us</a></li>
-                            <li><a class="dropdown-item" href="/logout">LogOut</a></li>
+                        @else
+                            <li><a class="dropdown-item" href="/dashboard/chg-pass">Change Password</a></li>
+                            <li><a class="dropdown-item" href="/dashboard/contact-us">Contact Us</a></li>
+                            <li>
+                                <form action="/logout" method="post">
+                                    <button class="dropdown-item" type="submit">LogOut</button>
+                                </form>
+                            </li>
                         @endif
                     </ul>
                 </div>
@@ -62,11 +66,11 @@
         </div>
     </div>
           @yield('content')
-          {{-- <div class="row mt-5">
+          <div class="row mt-5">
             <div class="col-lg-12">
-                <div class="navbar d-flex justify-content-center text-white py-3" style="background-color: #023047">Made By <span class="border-light border-bottom mx-1 footer-ku"> DupakDulu </span> With ❤ </div>
+                <div class="navbar d-flex justify-content-center text-white py-3 fixed-bottom" style="background-color: #023047">Made By <span class="border-light border-bottom mx-1 footer-ku"> DupakDulu </span> With ❤ </div>
             </div>
-        </div> --}}
+        </div>
 </body>
 </html>
 

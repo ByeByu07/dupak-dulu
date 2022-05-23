@@ -197,7 +197,7 @@
                 </select>
             </div>
         </div>
-        <div class="row my-5 p-5 bg-dark rounded shadow">
+        <div class="row my-5 p-5 bg-primary rounded shadow">
             <div class="col-lg-8 total mb-5">
                <h1 class="text-center total-pak text-white">Rp. 100.000</h1>
             </div>

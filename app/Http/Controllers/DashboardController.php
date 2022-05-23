@@ -12,7 +12,18 @@ class DashboardController extends Controller
      * @param  \Illuminate\Http\Request  $request
      * @return \Illuminate\Http\Response
      */
-    public function index(){
+    public function index()
+    {
         return view('dashboard.user.index');
+    }
+
+    public function chgPass()
+    {
+        return view('dashboard.user.chg-pass');
+    }
+
+    public function contactUs()
+    {
+        return view('dashboard.user.contact-us');
     }
 }
