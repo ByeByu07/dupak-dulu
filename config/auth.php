@@ -17,10 +17,10 @@ return [
         'guard' => 'web',
         'passwords' => 'users',
     ],
-    'admins' => [
-        'guard' => 'admin',
-        'passwords' => 'admins'
-    ],
+    // 'admins' => [
+    //     'guard' => 'admin',
+    //     'passwords' => 'admins'
+    // ],
 
     /*
     |--------------------------------------------------------------------------
@@ -77,6 +77,11 @@ return [
             'driver' => 'database',
             'model' => App\Models\Admin::class,
         ]
+
+        // 'admins' => [
+        //     'driver' => 'database',
+        //     'table' => 'admins',
+        // ]
 
         // 'users' => [
         //     'driver' => 'database',

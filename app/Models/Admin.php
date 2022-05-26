@@ -9,5 +9,7 @@ class Admin extends Model
 {
     use HasFactory;
 
+    protected $guard = 'admin';
+
     protected $guarded = ['password_confirmation'];
 }

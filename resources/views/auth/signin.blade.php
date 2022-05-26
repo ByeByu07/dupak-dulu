@@ -1,6 +1,6 @@
 @extends('layout.main')
 @section('content')
-      <div class="modal-content container mt-5 bg-light">
+      <div class="modal-content container mt-5 bg-light p-1">
         <div class="modal-header justify-content-beetwen">
           <h2 class="modal-title" id="exampleModalLabel">SignIn</h2>
         </div>

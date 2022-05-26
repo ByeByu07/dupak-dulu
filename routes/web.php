@@ -39,13 +39,16 @@ Route::controller(AuthController::class)->group(function () {
     Route::post('/signin', 'signin2');
     Route::get('/forgot-pass', 'forgot1');
     Route::post('/forgot-pass', 'forgot2');
+    Route::get('/reset-pass/{token}', 'reset1');
+    Route::post('/reset-pass', 'reset2');
+    Route::get('/logout', 'logout');
 });
 
 // =========================DASHBOARD USER=========================
 Route::controller(DashboardController::class)->group(function () {
-    Route::get('/dashboard', 'index');
-    Route::get('/dashboard/chg-pass', 'chgPass');
-    Route::get('/dashboard/contact-us', 'contactUs');
-}); //->middleware('auth');
+    Route::get('/dashboard', 'index')->middleware('auth');
+    Route::get('/dashboard/chg-pass', 'chgPass')->middleware('auth');
+    Route::get('/dashboard/contact-us', 'contactUs')->middleware('auth');
+});
 
 // =========================DASHBOARD ADMIN=========================
