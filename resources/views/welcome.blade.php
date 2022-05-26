@@ -20,8 +20,17 @@
       }
     </style>
     <main>
-
-
+        @if (session()->has('message'))
+            <div class="alert alert-success alert-dismissible fade show" role="alert">
+                <strong>Holy guacamole!</strong>
+                <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
+            </div>
+        @elseif(session()->has('error'))
+        <div class="alert alert-danger alert-dismissible fade show" role="alert">
+            <strong>Password harus sama</strong>
+            <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
+        </div>
+        @endif
           <div class="p-5  bg-warning rounded-3">
             <div class="container-fluid py-5">
               <h1 class="display-5 fw-bold">DupakDulu, Yuk!</h1>

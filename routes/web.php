@@ -2,7 +2,9 @@
 
 use App\Http\Controllers\DupakController;
 use App\Http\Controllers\DashboardController;
+use App\Http\Controllers\SignUpController;
 use Illuminate\Support\Facades\Route;
+use App\Http\Controllers\AuthController;
 
 /*
 |--------------------------------------------------------------------------
@@ -27,6 +29,16 @@ Route::controller(DupakController::class)->group(function () {
     Route::get('/dupak', 'index')->name('dupak.index');
     Route::get('/dupak/create')->name('dupak.create');
     Route::get('/dupak/{dupak}/edit')->name('dupak.edit');
+});
+
+// =========================SIGNUP================================
+Route::controller(AuthController::class)->group(function () {
+    Route::get('/signup', 'signup1');
+    Route::post('/signup', 'signup2');
+    Route::get('/signin', 'signin1');
+    Route::post('/signin', 'signin2');
+    Route::get('/forgot-pass', 'forgot1');
+    Route::post('/forgot-pass', 'forgot2');
 });
 
 // =========================DASHBOARD USER=========================

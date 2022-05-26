@@ -32,7 +32,7 @@
         font-weight: 400;
     }
 </style>
-<body>
+<body class="@yield('bg-body')">
     <div class="row">
         <div class="col-lg-12">
           <nav class="navbar navbar-expand-lg navbar-dark" style="background-color: #023047">
@@ -54,7 +54,7 @@
                         </ul>
                       </div>
                     @else
-                    <a class="btn btn-light" href="/login" data-bs-toggle="modal" data-bs-target="#login">SignIn</a>
+                    <a class="btn btn-light" href="/signin" >SignIn</a>
                     @endauth
                     <a class="nav-link" href="/dupak" style="color:#8ecae6">DUPAK</a>
                     <a class="nav-link" href="/skp" style="color:#8ecae6">SKP</a>
@@ -73,153 +73,4 @@
         </div>
 </body>
 </html>
-
-
-{{-- MODAL  SECTION --}}
-
-{{-- Login --}}
-<div class="modal fade" id="login" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
-    <div class="modal-dialog modal-lg">
-      <div class="modal-content">
-        <div class="modal-header justify-content-beetwen">
-          <h2 class="modal-title" id="exampleModalLabel">SignIn</h2>
-          <button type="button" class="btn-close float-end btn-light btn" data-bs-dismiss="modal" aria-label="Close">&times;</button>
-        </div>
-        <div class="modal-body bg-light">
-            <form action="/login" method="post">
-                @csrf
-                <div class="container">
-                    <div class="mb-3">
-                        <label for="email" class="form-label">Email</label>
-                        <input class="form-control" type="email" name="email" id="email">
-                    </div>
-                    <div class="mb-3">
-                        <label for="password" class="form-label">Password</label>
-                        <input class="form-control" type="password" name="password" id="password">
-                    </div>
-                </div>
-        </div>
-        <div class="modal-footer justify-content-between p-4">
-            <div class="">
-                <a href="#" data-bs-toggle="modal" data-bs-target="#forgot-password">Forgot password ?</a>
-            </div>
-            <div class="">
-                <a data-bs-toggle="modal" data-bs-target="#register" href="#">SignUp ?</a>
-                <button type="submit" class="btn btn-primary">Login</button>
-            </div>
-          </form>
-        </div>
-      </div>
-    </div>
-  </div>
-
-  {{-- REGISTER --}}
-  <div class="modal fade" id="register" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
-    <div class="modal-dialog modal-lg">
-      <div class="modal-content">
-        <div class="modal-header justify-content-beetwen">
-          <h2 class="modal-title" id="exampleModalLabel">SignUp</h2>
-          <button type="button" class="btn-close float-end btn-light btn" data-bs-dismiss="modal" aria-label="Close">&times;</button>
-        </div>
-        <div class="modal-body bg-light">
-            <form action="/login" method="post">
-                @csrf
-                <div class="container">
-                    {{-- <div class="mb-3 bg-warning p-2 rounded text-white">
-                          <h5> Masukkan nomor TelePhone dan Email yang aktif</h5>
-                          <ul>
-                              <li>No TelePhone diutamakan What'sApp yang aktif</li>
-                          </ul>
-                    </div> --}}
-                    <div class="row">
-                        <div class="mb-3 col-lg-12">
-                            <label for="email" class="form-label">Email</label>
-                            <div class="input-group">
-                                <span class="input-group-text" id="email">@</span>
-                                <input class="form-control" type="email" name="email" id="email"  aria-describedby="email">
-                            </div>
-                        </div>
-                        <div class="mb-3 col-lg-12">
-                            <label for="no-wa" class="form-label">No WhatsApp</label>
-                            <div class="input-group">
-                                <span class="input-group-text" id="no-wa">@</span>
-                                <input class="form-control" type="no-wa" name="no-wa" id="no-wa"  aria-describedby="no-wa">
-                            </div>
-                        </div>
-                        <div class="mb-3 col-lg-6">
-                            <label for="username" class="form-label">Username</label>
-                            <div class="input-group">
-                                <span class="input-group-text" id="username">@</span>
-                                <input class="form-control" type="username" name="username" id="username"  aria-describedby="username">
-                            </div>
-                        </div>
-                        <div class="mb-3 col-lg-6">
-                            <label for="password" class="form-label">Password</label>
-                            <div class="input-group">
-                                <span class="input-group-text" id="password">@</span>
-                                <input class="form-control" type="password" name="password" id="password"  aria-describedby="password">
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <div class="text-center mt-2">
-                    <p>Or SignIn With</p>
-                </div>
-                <div class="third-sign-in row">
-                    {{-- <a href="" class=" col-12">
-                        <img class="img-fluid mx-auto d-block" src="black.jpg" width="200">
-                    </a> --}}
-                </div>
-        </div>
-        <div class="modal-footer justify-content-between p-4">
-            {{-- <div class="">
-                <a href="#" data-bs-toggle="modal" data-bs-target="#forgot-password">Forgot password ?</a>
-            </div> --}}
-            <div class="">
-                <button type="button" class="btn btn-primary"  data-bs-target="#login" data-bs-toggle="modal">Back </button>
-            </div>
-            <div class="">
-                <button type="submit" class="btn btn-primary">Register</button>
-            </div>
-          </form>
-        </div>
-      </div>
-    </div>
-  </div>
-
-  {{-- FORGOT PASWORD --}}
-  <div class="modal fade" id="forgot-password" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
-    <div class="modal-dialog modal-lg">
-      <div class="modal-content">
-        <div class="modal-header justify-content-beetwen">
-          <h2 class="modal-title" id="exampleModalLabel">Forgot Password</h2>
-          <button type="button" class="btn-close float-end btn-light btn" data-bs-dismiss="modal" aria-label="Close">&times;</button>
-        </div>
-        <div class="modal-body bg-light">
-            <form action="/forgot-password" method="post">
-                @csrf
-                <div class="container">
-                    <div class="row">
-                        <div class="mb-3 col-lg-12">
-                            <label for="email" class="form-label">Email</label>
-                            <div class="input-group">
-                                <span class="input-group-text" id="email">@</span>
-                                <input class="form-control" type="email" name="email" id="email"  aria-describedby="email">
-                            </div>
-                        </div>
-                    </div>
-                </div>
-        </div>
-        <div class="modal-footer justify-content-between p-4">
-            <div class="">
-                <button type="button" class="btn btn-primary"  data-bs-target="#login" data-bs-toggle="modal">Back </button>
-            </div>
-            <div class="">
-                <button type="submit" class="btn btn-primary">Send e-mail reset password </button>
-            </div>
-          </form>
-        </div>
-      </div>
-    </div>
-  </div>
 
