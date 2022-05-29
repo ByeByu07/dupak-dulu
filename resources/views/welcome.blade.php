@@ -31,7 +31,7 @@
             <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
         </div>
         @endif
-          <div class="p-5  bg-warning rounded-3">
+          <div class="p-5  bg-warning rounded-3  height-2">
             <div class="container-fluid py-5">
               <h1 class="display-5 fw-bold">DupakDulu, Yuk!</h1>
               <p class="col-md-8 fs-4">Jasa Tulis SKP-DUPAK-BAPAK</p>
@@ -61,7 +61,17 @@
 
 
       </main>
-<div class="row p-5 ">
+<div class="row p-5 margin-wel-ku  height-1 gap-6">
+    <div class="col-lg-8 text-center d-flex align-items-center pl-4 justify-content-center ">
+        <div class="bg-warning p-3 ">
+            <span class="logo-ku logo border-bottom border-white text-white">DupakDulu</span>
+        </div>
+    </div>
+    <div class="col-lg-4 text-center d-flex align-items-center justify-content-center">
+            <h2>Website yang menyediakan jasa bagi siapapun terutama pegawai negeri fungsionalitas yang membutuhkan jasa tulis SKP-DUPAK.</h2>
+    </div>
+</div>
+<div class="row p-5 margin-wel-ku">
     <div class="col-lg-12">
         <p style="font-size: 5em" class="text-center  d-flex justify-content-center">
             Layanan Kami

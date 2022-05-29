@@ -3,8 +3,27 @@
     padding: 0;
 }
 
-@media only screen and(max-width:540px) {
+@media only screen and(max-width:390px) {
     .toggle-ku {
         display: none;
     }
+    .logo-ku {
+        font-size: 1rem;
+    }
+}
+
+.logo-ku {
+    font-size: 5rem;
+}
+
+.margin-wel-ku {
+    margin: 5rem 0;
+}
+
+.height-1 {
+    height: 40rem;
+}
+
+.height-2 {
+    height: 25rem;
 }
