@@ -1,8 +1,8 @@
 @extends('layout.main2')
 @section('content')
-    <div class="row">
+    {{-- <div class="row vh-100">
         <div class="col-lg-4">
-            <div class="card bg-warning border-0 align-items-center pb-5 pt-3">
+            <div class="card border-0  py-auto ">
                 <div class="card-body">
                     <h2 class='text-center mb-4 alert'>User Profile</h2>
                     <h5 class="border-bottom border-dark d-inline-block text-center">Email</h4>
@@ -12,12 +12,14 @@
                 </div>
             </div>
         </div>
-        <div class="col-lg-8">
+        <div class="col-lg-8 bg-dashboard"> --}}
             <div class="wrap-jasa my-2">
-                <a href="/dupak" class="btn btn-success">Buat DUPAK</a>
-                <a href="/skp" class="btn btn-success">Buat SKP</a>
+                <span class="mx-3">Buat :</span>
+                <a href="/dupak" class="btn btn-outline-success">+  DUPAK</a>
+                <a href="/skp" class="btn  btn-outline-success">+ SKP</a>
+                <a href="#" class="btn  btn-secondary">Coming Soon</a>
             </div>
-            <table class="table table-hover table-bordered text-center table-striped">
+            <table class="table table-hover table-bordered text-center">
                 <thead>
                     <tr>
                         <th scope="col">No</th>
@@ -43,6 +45,6 @@
                 </tr>
                 </tbody>
             </table>
-        </div>
-    </div>
+        {{-- </div>
+    </div> --}}
 @stop

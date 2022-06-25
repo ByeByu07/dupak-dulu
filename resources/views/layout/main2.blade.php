@@ -66,7 +66,19 @@
           </nav>
         </div>
     </div>
-          @yield('content')
+    <div class="row">
+        <div class="col-3 m-2">
+            <ul class="list-group text-center">
+                <li class="list-group-item {{Request::is('/dashboard')?'active':''}}" ><a  class="text-a-dashboard" href="/dashboard">Profile | Profil</a></li>
+                <li class="list-group-item"><a class="text-a-dashboard"href="/history">History | Riwayat</a></li>
+                <li class="list-group-item"><a class="text-a-dashboard"href="setting">Setting | Pengaturan</a></li>
+                <li class="list-group-item "><a class="text-a-dashboard"href="/logout">LogOut | Keluar</a></li>
+              </ul>
+        </div>
+        <div class="col-8">
+            @yield('content')
+        </div>
+    </div>
           <div class="row mt-5">
             <div class="col-lg-12">
                 <div class="navbar d-flex justify-content-center text-white py-3 fixed-bottom" style="background-color: #023047">Made By <span class="border-light border-bottom mx-1 footer-ku"> DupakDulu </span> With ❤ </div>
