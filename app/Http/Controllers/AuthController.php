@@ -12,6 +12,7 @@ use Illuminate\Auth\Events\PasswordReset;
 use Illuminate\Support\Facades\DB;
 use Illuminate\Support\Facades\Mail;
 use Illuminate\Support\Carbon;
+use Illuminate\Support\Facades\Session;
 
 class AuthController extends Controller
 {
@@ -65,11 +66,20 @@ class AuthController extends Controller
 
     public function signin2(Request $request)
     {
-        //validation
+        //validation + dns email akhir nanti
         $data = $request->validate([
-            'email' => 'required | exists:users',
+            'email' => 'required',
             'password' => 'required'
         ]);
+
+        if (Auth::attempt($data)) {
+            if (auth()->user()->id != 1) {
+                $request->session()->regenerate();
+                return redirect()->intended('dashboard');
+            }
+            $request->session()->regenerate();
+            return redirect()->intended('admin');
+        }
 
         // return 'ok';
         //redirect dashboard.user or dashboard.admin
@@ -80,12 +90,6 @@ class AuthController extends Controller
         //     $request->session()->regenerate();
         //     return redirect()->intended('/admin');
         // }
-
-        if (Auth::guard('web')->attempt($data)) {
-            return 'ok';
-            // $request->session()->regenerate();
-            // return redirect()->intended('/dashboard');
-        }
 
         // if (Auth::guard('admin')->attempt($data)) {
         //     $request->session()->regenerate();
@@ -119,7 +123,7 @@ class AuthController extends Controller
             $message->subject('Reset Password');
         });
 
-        return back()->with('message', 'Email reset password sudah dikirim coba cek email Anda !');
+        return back()->with('message', 'Email reset password sudah dikirim, coba cek email Anda !');
     }
 
     public function reset1($token)
@@ -156,12 +160,14 @@ class AuthController extends Controller
 
     public function logout(Request $request)
     {
+
+        Session::flush();
         Auth::logout();
-
-        $request->session()->invalidate();
-
-        $request->session()->regenerateToken();
-
         return redirect('/');
+    }
+
+    public function getRememberToken()
+    {
+        return '';
     }
 }

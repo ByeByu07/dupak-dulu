@@ -29,5 +29,9 @@ class AuthServiceProvider extends ServiceProvider
         ResetPassword::createUrlUsing(function ($user, string $token) {
             return 'http://127.0.0.1:8000/reset-pass?token=' . $token;
         });
+
+        // \Illuminate\Support\Facades\Auth::provider('customuserprovider', function ($app, array $config) {
+        //     return new CustomUserProvider($app['hash'], $config['model']);
+        // });
     }
 }
