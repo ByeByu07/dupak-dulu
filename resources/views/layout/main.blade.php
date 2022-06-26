@@ -68,7 +68,7 @@
           @yield('content')
           <div class="row mt-5">
             <div class="col-lg-12">
-                <div class="navbar d-flex justify-content-center text-white py-3" style="background-color: #023047">Made By <span class="border-light border-bottom mx-1 footer-ku"> DupakDulu </span> With ❤ </div>
+                <div class="navbar d-flex justify-content-center text-white py-3 fixed-bottom" style="background-color: #023047">Made By <span class="border-light border-bottom mx-1 footer-ku"> DupakDulu </span> With ❤ </div>
             </div>
         </div>
 </body>

@@ -49,6 +49,8 @@ Route::controller(DashboardController::class)->group(function () {
     Route::get('/dashboard', 'index');
     Route::get('/dashboard/chg-pass', 'chgPass');
     Route::get('/dashboard/contact-us', 'contactUs');
+    Route::get('/history', 'history');
+    Route::get("/setting", "setting");
 });
 // ->middleware('auth');
 

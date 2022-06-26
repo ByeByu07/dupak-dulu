@@ -31,7 +31,16 @@
             <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
         </div>
         @endif
-          <div class="p-5  bg-warning rounded-3  height-2">
+        <div class="row mt-5">
+            <div class="col-12  d-flex justify-content-center">
+                <header class="mt-5 text-center jumbo-text">
+                    <h1>DupakDulu, Yuk!</h1>
+                    <p>Jasa Tulis SKP-DUPAK</p>
+                </header>
+            </div>
+        </div>
+
+          {{-- <div class="p-5  bg-warning rounded-3  height-2">
             <div class="container-fluid py-5">
               <h1 class="display-5 fw-bold">DupakDulu, Yuk!</h1>
               <p class="col-md-8 fs-4">Jasa Tulis SKP-DUPAK-BAPAK</p>
@@ -57,7 +66,7 @@
                     </div>
                 </div>
             </div>
-          </div>
+          </div> --}}
 
 
       </main>
@@ -79,21 +88,21 @@
     </div>
 </div>
 <div class="row">
-    <div class="col-lg-6 col-md-6 ">
+    <div class="col-lg-6 col-md-6 shad-me">
       <div class="card border-0">
-        <div class="card-body ">
+        <div class="card-body item-welcome">
           <h5 class="card-title">DUPAK </h5>
           <p class="card-text">Daftar yang memuat prestasi kerja yang dicapai oleh calon atau pejabat fungsional yang diajukan dalam bentuk angka kredit dalam kurun waktu tertentu sesuai dengan ketentuan masing-masing peraturan jabatan fungsional dan angka kreditnya</p>
-          <a href="/dupak" class="btn btn-primary">Buat DUPAK</a>
+          <a href="/dupak" class="btn btn-primary width-100">Buat DUPAK</a>
         </div>
       </div>
     </div>
-    <div class="col-lg-6 col-md-6 ">
+    <div class="col-lg-6 col-md-6 shad-me">
       <div class="card border-0">
-        <div class="card-body ">
+        <div class="card-body item-welcome">
           <h5 class="card-title">SKP </h5>
           <p class="card-text"> Rencana dan target kinerja yang harus dicapai oleh pegawai dalam kurun waktu penilaian yang bersifat nyata dan dapat diukur serta disepakati pegawai dan atasannya</p>
-          <a href="/skp" class="btn btn-primary">Buat SKP</a>
+          <a href="/skp" class="btn btn-primary width-100">Buat SKP</a>
         </div>
       </div>
     </div>
