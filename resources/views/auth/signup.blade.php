@@ -80,7 +80,7 @@
         </div>
         <div class="modal-footer justify-content-between p-4">
             <div class="">
-                <a class="btn btn-primary"  href="/signin">Back </a>
+                <a class="btn btn-outline-primary"  href="/signin">Back </a>
             </div>
             <div class="">
                 <button type="submit" class="btn btn-primary">Register</button>

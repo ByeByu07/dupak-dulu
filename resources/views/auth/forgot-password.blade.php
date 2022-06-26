@@ -50,7 +50,7 @@
         </div>
         <div class="modal-footer justify-content-between p-4">
             <div class="">
-                <a href="/signin" class="btn btn-primary">Back </a>
+                <a href="/signin" class="btn btn-outline-primary">Back </a>
             </div>
             <div class="">
                 <button type="submit" class="btn btn-primary">Send e-mail reset password </button>

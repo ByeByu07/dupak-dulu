@@ -1,11 +1,11 @@
-@extends('layout.main')
+@extends('layout.welcome')
 @section('content')
 <style>
     @import url('https://fonts.googleapis.com/css2?family=Nunito+Sans:wght@300&display=swap');
     body{
         font-family: 'Nunito Sans', sans-serif;
     }
-      .bd-placeholder-img {
+      /* .bd-placeholder-img {
         font-size: 1.125rem;
         text-anchor: middle;
         -webkit-user-select: none;
@@ -17,7 +17,7 @@
         .bd-placeholder-img-lg {
           font-size: 3.5rem;
         }
-      }
+      } */
     </style>
     <main>
         @if (session()->has('message'))
@@ -31,24 +31,47 @@
             <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
         </div>
         @endif
-        <div class="row mt-5">
-            <div class="col-12  d-flex justify-content-center">
-                <header class="mt-5 text-center jumbo-text">
+        <div class="row my-5">
+            <div class="col-sm-12  d-flex justify-content-center">
+                <section class="mt-5 text-center jumbo-text bg-warning">
                     <h1>DupakDulu, Yuk!</h1>
                     <p>Jasa Tulis SKP-DUPAK</p>
-                </header>
+                </section>
+            </div>
+        </div>
+        <div class="row py-5 px-3">
+            <div class="col-sm-4 mb-3">
+                <div class="card" style="">
+                    <div class="card-body bg-light shad-me">
+                      <h3 class="card-title  text-center">Pengunjung</h3>
+                      <h1 class="card-text text-center my-4">80</h1>
+                      <a href="#" class="card-link btn btn-outline-primary width-100">Lihat</a>
+                    </div>
+                  </div>
+            </div>
+            <div class="col-sm-4 mb-3">
+                <div class="card" style="">
+                    <div class="card-body bg-light shad-me">
+                      <h3 class="card-title  text-center">Antrian Order</h3>
+                      <h1 class="card-text text-center my-4">39</h1>
+                      <a href="#" class="card-link btn btn-outline-primary width-100">Lihat</a>
+                    </div>
+                  </div>
+            </div>
+            <div class="col-sm-4 mb-3">
+                <div class="card" style="">
+                    <div class="card-body bg-light shad-me">
+                      <h3 class="card-title  text-center">Order Selesai</h3>
+                      <h1 class="card-text text-center my-4">12</h1>
+                      <a href="#" class="card-link btn btn-outline-primary width-100">Lihat</a>
+                    </div>
+                  </div>
             </div>
         </div>
 
-          {{-- <div class="p-5  bg-warning rounded-3  height-2">
-            <div class="container-fluid py-5">
-              <h1 class="display-5 fw-bold">DupakDulu, Yuk!</h1>
-              <p class="col-md-8 fs-4">Jasa Tulis SKP-DUPAK-BAPAK</p>
-              <p><strong class=''>DupakDulu</strong>  Berpengalaman Dalam Pembuatan SKP-DUPAK</p>
-            </div>
-          </div>
 
-          <div class="row align-items-md-stretch">
+
+          <div class="row align-items-md-stretch mt-5">
             <div class="col-md-12 card border-0 text-center">
                 <div class="row mt-5">
                     <div class="col-lg-4 my-5">
@@ -66,7 +89,7 @@
                     </div>
                 </div>
             </div>
-          </div> --}}
+          </div>
 
 
       </main>
@@ -77,7 +100,7 @@
         </div>
     </div>
     <div class="col-lg-4 text-center d-flex align-items-center justify-content-center">
-            <h2>Website yang menyediakan jasa bagi siapapun terutama pegawai negeri fungsionalitas yang membutuhkan jasa tulis SKP-DUPAK.</h2>
+            <h2>Menyediakan jasa bagi siapapun terutama pegawai negeri fungsionalitas yang membutuhkan jasa tulis SKP-DUPAK.</h2>
     </div>
 </div>
 <div class="row p-5 margin-wel-ku">
