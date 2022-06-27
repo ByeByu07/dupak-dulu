@@ -34,8 +34,9 @@ class DashboardController extends Controller
         return view('dashboard.user.history');
     }
 
-    public function setting()
+    public function setting(User $user)
     {
-        return view("dashboard.user.setting.index");
+        $user = User::where('id', auth()->user()->id)->get();
+        return view("dashboard.user.setting.index", compact('user'));
     }
 }
