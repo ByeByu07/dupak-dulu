@@ -19,6 +19,27 @@ class DashboardController extends Controller
         return view('dashboard.user.index', compact('user'));
     }
 
+    public function editProfile($id,Request $request)
+    {
+        User::findOrFail($id)->update([
+            'email' => $request->email,
+            'wa'=> $request->wa
+        ]);
+
+        return redirect()->back()->with('message','berhasil diubah');
+    }
+
+    public function checkpass(Request $request)
+    {
+        dd(auth()->user()->password);
+
+        // if(!$request->inputPassword === auth()->user()->password){
+        //     return redirect()->back()->with("message",'password lama salah');
+        // }else{
+        //     return dd("ada");
+        // }
+    }
+
     public function chgPass()
     {
         return view('dashboard.user.chg-pass');

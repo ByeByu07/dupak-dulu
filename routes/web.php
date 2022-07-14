@@ -47,6 +47,8 @@ Route::controller(AuthController::class)->group(function () {
 // =========================DASHBOARD USER=========================
 Route::controller(DashboardController::class)->group(function () {
     Route::get('/dashboard', 'index');
+    Route::post('/dashboard/{id}','editProfile');
+    Route::post('/dashboard/checkpass');
     Route::get('/dashboard/chg-pass', 'chgPass');
     Route::get('/dashboard/contact-us', 'contactUs');
     Route::get('/history', 'history');

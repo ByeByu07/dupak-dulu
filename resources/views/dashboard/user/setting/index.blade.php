@@ -2,6 +2,11 @@
 @section('content')
 @foreach ($user as $user)
 <div class="row mt-3">
+    @if(session()->has('message')){
+        <div class="alert alert-danger" role="alert">
+            {{$message}}
+        </div>
+    }@endif
     <div class="col-md-4">
         <div class="card p-2">
             <header class="">
@@ -11,19 +16,19 @@
                 <div class="row">
                     <label for="inputPassword" class="col-12 col-form-label">Password</label>
                     <div class="col-12">
-                      <input type="password" class="form-control" id="inputPassword" value="{{bcrypt($user->password)}}" readonly>
+                      <input type="password" class="form-control" id="inputPassword" value="{{$user->password}}" readonly>
                     </div>
                 </div>
                 <div class="row">
-                    {{-- <form action="/dashboard/checkpass" method="post"> --}}
+                    <form action="/dashboard/checkpass" method="post">
                         @csrf
                         <label for="inputPassword" class="col-12 col-form-label">Masukkan password lama</label>
                         <div class="col-12">
                             <input type="password" class="form-control" id="inputPassword">
                         </div>
                     </div>
-                    <button class="btn btn-outline-danger mt-3" data-bs-toggle="modal" data-bs-target="#modalOldPass">Ganti Password</button>
-                {{-- </form> --}}
+                    <button type="submit" class="btn btn-outline-danger mt-3">Ganti Password</button>
+                </form>
             </section>
         </div>
     </div>
