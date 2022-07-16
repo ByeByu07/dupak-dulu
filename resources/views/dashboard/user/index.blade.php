@@ -10,11 +10,11 @@
     </header>
 <div class="row">
     <div class="col-3">
-        @if(!$user->avatar){
+        @if(!$user->avatar)
             <img src="https://thumbs.dreamstime.com/z/no-user-profile-picture-24185395.jpg" alt="" class="img-fluid  border-radius-30">
-        }@else{
+        @else
             <img src="{{$user->avatar}}" alt="" class="img-fluid  border-radius-30">
-        }@endif
+        @endif
     </div>
     <div class="col-8">
         <table>

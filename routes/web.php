@@ -48,11 +48,12 @@ Route::controller(AuthController::class)->group(function () {
 Route::controller(DashboardController::class)->group(function () {
     Route::get('/dashboard', 'index');
     Route::post('/dashboard/{id}','editProfile');
-    Route::post('/dashboard/checkpass');
-    Route::get('/dashboard/chg-pass', 'chgPass');
+    // Route::get('/dashboard/chg-pass', 'chgPass');
     Route::get('/dashboard/contact-us', 'contactUs');
     Route::get('/history', 'history');
     Route::get("/setting", "setting");
+    Route::post('/setting/checkpass','checkpass');
+    Route::post('/setting/chg-pass', 'chgPass');
 });
 // ->middleware('auth');
 

@@ -31,18 +31,27 @@ class DashboardController extends Controller
 
     public function checkpass(Request $request)
     {
-        dd(auth()->user()->password);
+        $request->validate([
+            'inputPassword'=>'required|current_password:web'
+        ]);
 
-        // if(!$request->inputPassword === auth()->user()->password){
-        //     return redirect()->back()->with("message",'password lama salah');
-        // }else{
-        //     return dd("ada");
-        // }
+       return redirect()->back()->with('message','');
+        
     }
 
-    public function chgPass()
+    public function chgPass(Request $request)
     {
-        return view('dashboard.user.chg-pass');
+       $request->validate([
+        'inputPassword2' => 'required | same:inputPassword_c2',
+        'inputPassword_c2' => 'required '
+       ]);
+
+       User::findOrFail(auth()->user()->id)->update([
+        'password'=> bcrypt($request->inputPassword2)
+       ]);
+       
+       return redirect()->back()->with('success','');
+
     }
 
     public function contactUs()
