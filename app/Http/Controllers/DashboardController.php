@@ -50,7 +50,7 @@ class DashboardController extends Controller
         'password'=> bcrypt($request->inputPassword2)
        ]);
        
-       return redirect()->back()->with('success','');
+       return redirect()->back()->with('success','1');
 
     }
 

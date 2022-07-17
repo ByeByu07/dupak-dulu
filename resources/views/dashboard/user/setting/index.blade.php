@@ -69,7 +69,7 @@
                     </div>
                 </div>
                 <div class="modal-footer">
-                    <button type="submit" class="btn btn-primary">Save changes</button>
+                    <button type="submit" onclick="animation()" class="btn btn-primary">Save changes</button>
                 </div>
             </form>
             </div>
@@ -84,4 +84,15 @@
     </div>
 </div>
 @endforeach
+<script>
+    function animation(){
+      
+                    Swal.fire(
+        'Success!',
+        'Password has been changes',
+        'success'
+        )   
+      
+         }
+ </script>
 @stop
