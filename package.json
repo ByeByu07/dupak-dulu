@@ -17,6 +17,7 @@
         "postcss": "^8.1.14"
     },
     "dependencies": {
-        "inertia": "^0.0.7"
+        "inertia": "^0.0.7",
+        "sweetalert2": "^11.4.23"
     }
 }
