@@ -1,18 +1,5 @@
 @extends('layout.main2')
 @section('content')
-    {{-- <div class="row vh-100">
-        <div class="col-lg-4">
-            <div class="card border-0  py-auto ">
-                <div class="card-body">
-                    <h2 class='text-center mb-4 alert'>User Profile</h2>
-                    <h5 class="border-bottom border-dark d-inline-block text-center">Email</h4>
-                    <div class="">muhammadbaharuddin08123@gmail.com</div>
-                    <h5 class="border-bottom border-dark d-inline-block text-center">Nomor WhatsApp</h4>
-                    <div class="">085710910867</div>
-                </div>
-            </div>
-        </div>
-        <div class="col-lg-8 bg-dashboard"> --}}
             <div class="wrap-jasa my-2">
                 <span class="mx-3">Buat :</span>
                 <a href="/dupak" class="btn btn-outline-success">+  DUPAK</a>
@@ -24,6 +11,7 @@
                     <tr>
                         <th scope="col">No</th>
                         <th scope="col">Tipe</th>
+                        <th scope="col">Status</th>
                         <th scope="col">Tanggal Order</th>
                         <th scope="col">Download</th>
                         <th scope="col">Detail</th>
@@ -33,6 +21,7 @@
                 <tr>
                     <td>1</td>
                     <td>DUPAK</td>
+                    <td>Belum bayar</td>
                     <td>12-03-20</td>
                     <td class=""><a href="#"><svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="currentColor" class="bi bi-download" viewBox="0 0 16 16">
                         <path d="M.5 9.9a.5.5 0 0 1 .5.5v2.5a1 1 0 0 0 1 1h12a1 1 0 0 0 1-1v-2.5a.5.5 0 0 1 1 0v2.5a2 2 0 0 1-2 2H2a2 2 0 0 1-2-2v-2.5a.5.5 0 0 1 .5-.5z"/>
@@ -45,6 +34,4 @@
                 </tr>
                 </tbody>
             </table>
-        {{-- </div>
-    </div> --}}
 @stop

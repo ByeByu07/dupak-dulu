@@ -20,6 +20,9 @@ use App\Http\Controllers\AuthController;
 Route::get('/', function () {
     return view('welcome');
 });
+Route::get('/about',function(){
+    return view('about');
+});
 Route::fallback(function () {
     return view('fallback');
 });
@@ -27,7 +30,8 @@ Route::fallback(function () {
 
 Route::controller(DupakController::class)->group(function () {
     Route::get('/dupak', 'index')->name('dupak.index');
-    Route::get('/dupak/create')->name('dupak.create');
+    Route::post('/dupak', 'create')->name('dupak.create');
+    // Route::get('/dupak/create')->name('dupak.create');
     Route::get('/dupak/{dupak}/edit')->name('dupak.edit');
 });
 
